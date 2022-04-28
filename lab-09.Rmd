@@ -1,0 +1,81 @@
+---
+title: "Lab 09 - Predictive modeling"
+author: |
+        | Insert team name here:
+        | Insert team member 1 here
+        | Insert team member 2 here
+        | Insert team member 3 here
+        | Insert team member 4 here
+date: "Insert date here"
+output: pdf_document
+---
+
+### Load packages and data
+
+```{r load-packages, message = FALSE}
+library(tidyverse) 
+```
+
+```{r load-data, message = FALSE}
+# Read in Data
+train.appts <- read.csv('http://www.math.montana.edu/ahoegh/teaching/stat408/datasets/MedApptsTrain.csv')
+test.appts <- read.csv('http://www.math.montana.edu/ahoegh/teaching/stat408/datasets/MedApptsTest.csv')
+
+# Recode outcome variable to 
+# 1 = Missed appointment, 0 = Did not miss appointment
+train.appts$No.show <- as.numeric(train.appts$No.show == "Yes")
+test.appts$No.show <- as.numeric(test.appts$No.show == "Yes")
+```
+
+### Exercise 1
+
+Remove this text, and add your answer for Exercise 1 here.
+Add code chunks as needed.
+
+### Exercise 2
+
+...
+
+### Exercise 3
+
+...
+
+### Exercise 4
+
+...
+
+### Exercise 5
+
+...
+
+### Exercise 6
+
+...
+
+### Exercise 7
+
+Replace "blank1" and "blank2" in the equations below with the appropriate coefficient values.
+
+Linear on the logit (log-odds) scale:
+$$
+\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = blank1 + blank2*Age
+$$
+Logistic curve on the probability scale:
+$$
+\hat{p} = \frac{\exp(blank1 + blank2*Age)}{1 + \exp(blank1 + blank2*Age)}
+$$
+
+
+### Exercise 8
+
+...
+
+### Exercise 9
+
+...
+
+### Exercise 10: Extra Credit
+
+...
+
+
